@@ -33,3 +33,40 @@ h1 {
 #helloBtn:hover {
     opacity: 0.9;
 }
+
+section:nth-child(even) {
+    background: #fff;
+}
+
+section:nth-child(odd) {
+    background: #fdf0f6;
+}
+
+/* ナビゲーションメニュー */
+.site-nav {
+    background: #ff7ab6;
+    padding: 10px;
+    text-align: center;
+    position: sticky; /* スクロールしても上に固定 */
+    top: 0;
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+html { scroll-behavior: smooth; }
+
+section { padding: 56px 16px; }
+section h2 { margin: 0 0 12px; font-size: 24px; }
+section:nth-of-type(odd) { background: #fff; }
+section:nth-of-type(even) { background: #fdf0f6;}
+
+.site-nav a.active { text-decoration: underline; }
