@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Works - Azusa Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="brand">Azusa Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="works.html" data-nav>Works</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="card">
+      <h2>作品一覧</h2>
+      <p class="tag">PC：3列 / タブレット：2列 / スマホ：1列</p>
+    </section>
+
+    <section class="grid">
+      <!-- 必要な数だけ増やす -->
+      <article class="tile">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="tag">HTML / CSS / JS</div>
+          <h3>ToDo リスト</h3>
+          <p class="tag">ローカルストレージ保存、フィルタ機能</p>
+          <p style="margin-top:10px;"><a class="btn" href="work-template.html">詳細</a></p>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="tag">HTML / CSS</div>
+          <h3>自己紹介ページ</h3>
+          <p class="tag">1ページテンプレ</p>
+          <p style="margin-top:10px;"><a class="btn" href="work-template.html">詳細</a></p>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="tag">JavaScript</div>
+          <h3>クイズミニゲーム</h3>
+          <p class="tag">選択式/得点表示</p>
+          <p style="margin-top:10px;"><a class="btn" href="work-template.html">詳細</a></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="y"></span> Azusa</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

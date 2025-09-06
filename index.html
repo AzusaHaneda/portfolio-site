@@ -1,47 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-    <head>
-        <mate charset="UTF-8">
-        <mate name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>自己紹介サイト</title>
-        <!-- CSSファイルを読み込み -->
-        <link rel="stylesheet" href="styles.css">
-        <!-- JSファイルを読み込み -->
-        <script src="script.js" defer></script>     
-    </head>
-    <body>
-        <!--ナビゲーションメニュー-->
-        <nav>
-            <a href="#about">自己紹介</a>
-            <a href="#cats">猫ちゃん</a>
-            <a href="#interaction">メッセージ</a>
-        </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Azusa Portfolio</title>
+  <meta name="description" content="フロントエンド志望・学習中のポートフォリオサイト" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="brand">Azusa Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="works.html" data-nav>Works</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <h1>こんにちは！</h1>
-        <p>ここに自己紹介を書いていきます。</p>
-        <!--自己紹介セクションを追加-->
-        <section id="about">
-            <h2>自己紹介</h2>
-            <P>鹿児島在住。プログラミングを勉強中です。</P>
-            <P>将来的にフロントエンドエンジニアとして活躍したいです。</P>
-        </section>
-        <!--猫ちゃん紹介セクション-->
-        <section id="cats">
-            <h2>愛猫たち</h2>
-            <div class="cat-card">
-                <h3>むう</h3>
-                <P>お兄ちゃん。頭と体が大きめ。だみ声担当の食いしん坊。</P>
-            </div>
-            <div class="cat-card">
-                <h3>のあ</h3>
-                <P>妹。ふわふわボディ。目覚まし係のツンデレちゃん。</P>
-            </div>
-        </section>
+  <main class="main">
+    <section class="columns">
+      <div class="card">
+        <h2>こんにちは、あずさです。</h2>
+        <p>鹿児島在住。HTML / CSS / JavaScript を中心に学習しながら、Web制作の基礎を固めています。将来的にはフロントエンドエンジニアとして、UI/UX を意識した開発に携わりたいです。</p>
+        <p style="margin-top:12px;"><a class="btn" href="works.html">作品を見る</a>
+        <a class="btn ghost" href="contact.html">お問い合わせ</a></p>
+      </div>
 
+      <div class="card">
+        <h2>スキル / 学習中</h2>
+        <ul class="list">
+          <li>HTML5 / セマンティクス・アクセシビリティ意識</li>
+          <li>CSS3 / Flexbox / Grid / レスポンシブ</li>
+          <li>JavaScript（DOM 操作 / 小規模アプリ）</li>
+          <li>GitHub / GitHub Pages での公開</li>
+        </ul>
+      </div>
+    </section>
 
-        <section id="interaction">
-            <button id="helloBtn">click‼</button>
-            <p id="message"></p>
-        </section>
-    </body>
+    <section>
+      <h2>最近の作品</h2>
+      <div class="grid">
+        <article class="tile">
+          <div class="thumb"></div>
+          <div class="meta">
+            <div class="tag">HTML / CSS / JS</div>
+            <h3>ToDo リスト</h3>
+            <p class="tag">ローカルストレージ保存、フィルタ機能</p>
+            <p style="margin-top:10px;"><a class="btn" href="work-template.html">詳細</a></p>
+          </div>
+        </article>
+        <article class="tile">
+          <div class="thumb"></div>
+          <div class="meta">
+            <div class="tag">HTML / CSS</div>
+            <h3>自己紹介ページ</h3>
+            <p class="tag">シンプルな1ページテンプレ</p>
+            <p style="margin-top:10px;"><a class="btn" href="work-template.html">詳細</a></p>
+          </div>
+        </article>
+        <article class="tile">
+          <div class="thumb"></div>
+          <div class="meta">
+            <div class="tag">JavaScript</div>
+            <h3>クイズミニゲーム</h3>
+            <p class="tag">選択式/得点表示</p>
+            <p style="margin-top:10px;"><a class="btn" href="work-template.html">詳細</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="y"></span> Azusa
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
 </html>

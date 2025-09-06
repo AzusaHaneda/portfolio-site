@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Azusa Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="brand">Azusa Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="works.html" data-nav>Works</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="columns">
+      <div class="card">
+        <h2>お問い合わせ</h2>
+        <p>お仕事のご相談・ご質問などお気軽にどうぞ。</p>
+        <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">お名前</label>
+            <input class="input" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="email">メール</label>
+            <input class="input" id="email" name="email" type="email" required />
+          </div>
+          <div class="field">
+            <label for="msg">メッセージ</label>
+            <textarea id="msg" name="message" rows="6" required></textarea>
+          </div>
+          <button class="btn" type="submit">送信</button>
+          <a class="btn ghost" href="mailto:youremail@example.com?subject=お問い合わせ">メールアプリで開く</a>
+        </form>
+      </div>
+
+      <aside class="card">
+        <h3>SNS / リンク</h3>
+        <ul class="list">
+          <li><a href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a href="#" target="_blank" rel="noreferrer">X (Twitter)</a></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="y"></span> Azusa</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

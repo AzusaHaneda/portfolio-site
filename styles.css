@@ -1,72 +1,102 @@
-/* ページ全体の基本設定 */
-body {
-  font-family: sans-serif;
-  background-color: #fdfdfd;
-  color: #333;
-  margin: 0;
-  padding: 20px;
+:root{
+  --bg:#0f1115;
+  --fg:#e8eaf1;
+  --muted:#a6adbb;
+  --accent:#7aa2f7;
+  --card:#151823;
+  --border:#23283b;
+  --max:1100px;
 }
 
-/* 見出し */
-h1 {
-  color: #ff7ab6;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color:var(--fg); background:var(--bg);
 }
 
-/* キャットカード */
-.cat-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0.4px 8px rgba(0,0,0,0.1);
+/* Layout */
+.container{
+  max-width:var(--max); margin:0 auto; padding:24px;
+  min-height:100dvh; display:flex; flex-direction:column;
+}
+.header{
+  display:flex; justify-content:space-between; align-items:center; gap:16px;
+  padding:16px 0;
+}
+.brand{font-weight:700; letter-spacing:.3px}
+nav ul{display:flex; gap:12px; list-style:none; margin:0; padding:0}
+nav a{
+  display:inline-block; padding:8px 12px; border:1px solid transparent;
+  color:var(--fg); text-decoration:none; border-radius:10px;
+}
+nav a:hover{border-color:var(--border); background:#111528}
+nav a.is-active{border-color:var(--accent); color:var(--accent)}
+
+.main{flex:1; display:grid; gap:24px}
+.footer{border-top:1px solid var(--border); padding:16px 0; color:var(--muted); font-size:14px}
+
+/* 2-column layout (desktop) */
+.columns{
+  display:grid; gap:24px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width:900px){
+  .columns{grid-template-columns:1fr}
 }
 
-#helloBtn {
-    background: #ff7ab6;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
+/* Cards / tiles */
+.card{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:20px;
 }
-
-#helloBtn:hover {
-    opacity: 0.9;
+.card h3{margin:0 0 8px}
+.card p{margin:0; color:var(--muted)}
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none;
+  background:var(--accent); color:#0b0f1a; font-weight:600; border:1px solid transparent;
 }
-
-section:nth-child(even) {
-    background: #fff;
+.btn.ghost{
+  background:transparent; color:var(--fg); border-color:var(--border);
 }
+.btn + .btn{margin-left:8px}
 
-section:nth-child(odd) {
-    background: #fdf0f6;
+/* Works grid */
+.grid{
+  display:grid; gap:16px;
+  grid-template-columns: repeat(3, 1fr);
 }
+@media (max-width:900px){ .grid{grid-template-columns:repeat(2, 1fr)} }
+@media (max-width:560px){ .grid{grid-template-columns:1fr} }
 
-/* ナビゲーションメニュー */
-.site-nav {
-    background: #ff7ab6;
-    padding: 10px;
-    text-align: center;
-    position: sticky; /* スクロールしても上に固定 */
-    top: 0;
+.tile{
+  background:var(--card); border:1px solid var(--border); border-radius:14px;
+  overflow:hidden; display:flex; flex-direction:column;
 }
-
-.site-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+.thumb{
+  height:140px; background:
+    radial-gradient(80% 80% at 20% 10%, #2b3250 0%, #151823 60%),
+    linear-gradient(135deg, #24335a, #151823);
+  border-bottom:1px solid var(--border);
 }
+.tile .meta{padding:14px}
+.tag{font-size:12px; color:var(--muted)}
 
-.site-nav a:hover {
-    text-decoration: underline;
+/* Detail page */
+.hero{
+  height:220px; border-radius:16px; background:
+    radial-gradient(60% 60% at 20% 20%, #2b3250 0%, #151823 70%),
+    linear-gradient(135deg, #24335a, #151823);
+  border:1px solid var(--border);
 }
+.kv{display:grid; gap:24px; grid-template-columns:2fr 1fr}
+@media (max-width:900px){ .kv{grid-template-columns:1fr} }
+.list{margin:0; padding-left:18px; color:var(--muted)}
 
-html { scroll-behavior: smooth; }
-
-section { padding: 56px 16px; }
-section h2 { margin: 0 0 12px; font-size: 24px; }
-section:nth-of-type(odd) { background: #fff; }
-section:nth-of-type(even) { background: #fdf0f6;}
-
-.site-nav a.active { text-decoration: underline; }
+/* Forms */
+.input, textarea{
+  width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border);
+  background:#0d111a; color:var(--fg)
+}
+label{display:block; margin:0 0 8px; font-weight:600}
+.field{margin-bottom:16px}
